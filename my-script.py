@@ -16,9 +16,9 @@ pages = int(sys.argv[1])
 s = requests.session()
 
 def getInternship():
-	soup = s.get("http://internshala.com/internships/computer%20science-internship").text
-	response = BeautifulSoup(soup,'lxml')
-	jobs = response.findAll('div', {'class': 'container-fluid individual_internship'})
+	response = s.get("http://internshala.com/internships/computer%20science-internship").text
+	soup = BeautifulSoup(response,'lxml')
+	jobs = soup.findAll('div', {'class': 'container-fluid individual_internship'})
 
 	for val in jobs:
 	    """
