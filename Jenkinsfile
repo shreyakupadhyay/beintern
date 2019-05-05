@@ -3,11 +3,6 @@ pipeline {
   stages {
     stage('Jenkins Build Stage') {
       parallel {
-        stage('Build Stage') {
-          steps {
-            sh 'echo "Build Stage"'
-          }
-        }
         stage('Backend image') {
           steps {
             sh 'echo "Backend"'
@@ -27,11 +22,6 @@ pipeline {
     }
     stage('Test Stage') {
       parallel {
-        stage('Test Stage') {
-          steps {
-            sh 'echo "Lols"'
-          }
-        }
         stage('Integration Tests') {
           steps {
             sh 'echo "Shreyak"'
@@ -49,11 +39,6 @@ pipeline {
         stage('Deploy Stage') {
           steps {
             sh 'echo "Deploy"'
-          }
-        }
-        stage('Pull Docker images') {
-          steps {
-            sh 'echo "Nice"'
           }
         }
         stage('Rundeck Job') {
