@@ -41,7 +41,7 @@ pipeline {
             sh 'echo "Deploy"'
           }
         }
-        stage('Rundeck Job') {
+        stage('Trigger Rundeck Job') {
           steps {
             sh 'echo "Well Played"'
           }
